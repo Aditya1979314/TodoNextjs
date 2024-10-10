@@ -2,8 +2,12 @@ import React from 'react';
 
 
 const TodoList: React.FC = () => {
+
+
+
+
     return (
-        <div className='basis-10/12 h-full'>
+        <div>
           random component
         </div>
     );

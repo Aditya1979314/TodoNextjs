@@ -3,7 +3,7 @@ import Link from "next/link";
 
 interface NavbarProps {
     label:string,
-    icon:React.ReactNode
+    icon:React.ReactNode,
 }
 
 const  NavbarBox:React.FC<NavbarProps> = ({label,icon})=>{

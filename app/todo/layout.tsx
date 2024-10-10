@@ -12,13 +12,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
       >
         <div className="flex flex-row h-screen">
         <Navbar/>
-        {children}  
+        <div className="basis-10/12 h-full">
+        {children}
+        </div>  
         </div>
       </body>
     </html>
