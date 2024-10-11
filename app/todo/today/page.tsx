@@ -2,6 +2,25 @@
 import { Addtasksvg } from "@/components/Svgicons"
 import { useState } from "react";
 
+interface todo{
+title:string,
+description:string
+};
+
+interface Addtaskprops{
+    data:todo[]
+}
+
+const arr:todo[] = [
+    {
+        title:"first task",
+        description:"task data description"
+    },
+    {
+        title:"second task",
+        description:"second task description"
+    }
+];
 
 const Addtask:React.FC = ()=>{
 const [isactive,setisactive] = useState(false);
@@ -12,6 +31,17 @@ function onclickhandler(){
 
     return(
         <div className="h-full w-full flex flex-col items-center mt-4">
+            {
+                (arr.length > 0) && (
+                    arr.map((obj)=>{
+                        return <div className="px-4 py-2 mb-2  h-1/12 w-3/5 border-2 border-black-400">
+                            <div></div>
+                            <div>{obj.title}</div>
+                            <div>{obj.description}</div>
+                            </div>
+                    })
+                )
+            }
             <div onClick={onclickhandler} className="flex flex-row border w-3/5 mb-2 gap-1">
                 <Addtasksvg/>
                 <button className="hover:text-[#DC4C3E]">Add task</button>

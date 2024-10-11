@@ -41,7 +41,7 @@ function toggledropdown(){
             <div className="shadow-md absolute z-10 bg-white flex flex-col items-center py-3 px-2 rounded-md">
                 {
             arr.map((obj)=>{
-                return <NavbarBox label={obj.name} icon={obj.icon}/>
+                return <NavbarBox label={obj.name} icon={obj.icon} href='/todo/signup'/>
             })
             }
             <button className="text-white bg-blue-400 px-2 py-1 hover:bg-blue-300 rounded-md mt-2 w-full">Sign Out</button>
