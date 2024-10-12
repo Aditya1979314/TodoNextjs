@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Home() {
@@ -32,9 +33,12 @@ export default function Home() {
         </div>
 
         <div className="text-center mt-8">
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-                Add New Todo
-            </button>
+            <Link href='/signup' className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+               Signup
+            </Link>
+            <Link href='/login' className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 m-1">
+               Login
+            </Link>
         </div>
     </div>
 </div>
